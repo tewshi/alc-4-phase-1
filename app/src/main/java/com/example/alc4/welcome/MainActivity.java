@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        System.out.println("onClick");
         Intent intent;
         switch (view.getId()) {
             case R.id.btAbout:
