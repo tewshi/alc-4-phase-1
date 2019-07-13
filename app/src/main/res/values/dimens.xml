@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="profile_list_padding">12dp</dimen>
+    <dimen name="profile_list_margin">24dp</dimen>
 </resources>

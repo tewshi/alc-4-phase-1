@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivPicture"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
@@ -19,8 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/profile"
-        tools:srcCompat="@mipmap/profile" />
+        app:srcCompat="@drawable/profile" />
 
     <TextView
         android:id="@+id/tvName"
@@ -47,119 +46,175 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-    <TextView
-        android:id="@+id/tvLabelTrack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/alc_profile_track"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/profile_list_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dvProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/dvProfile">
 
-    <TextView
-        android:id="@+id/tvValTrack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="@string/alc_profile_track_value"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelTrack"
-        app:layout_constraintStart_toEndOf="@+id/tvLabelTrack" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvLabelCountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/alc_profile_country"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabelTrack" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvValCountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="@string/alc_profile_country_value"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelCountry"
-        app:layout_constraintStart_toEndOf="@+id/tvLabelCountry" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/profile_list_padding"
+                    android:paddingBottom="@dimen/profile_list_padding">
 
-    <TextView
-        android:id="@+id/tvLabelEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/alc_profile_email"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabelCountry" />
+                    <TextView
+                        android:id="@+id/tvLabelTrack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_track"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dvProfile" />
 
-    <TextView
-        android:id="@+id/tvValEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="@string/alc_profile_email_value"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelEmail"
-        app:layout_constraintStart_toEndOf="@+id/tvLabelEmail" />
+                    <TextView
+                        android:id="@+id/tvValTrack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_track_value"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelTrack"
+                        app:layout_constraintStart_toEndOf="@+id/tvLabelTrack" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvLabelPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/alc_profile_phone"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabelEmail" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/profile_list_padding"
+                    android:paddingBottom="@dimen/profile_list_padding">
 
-    <TextView
-        android:id="@+id/tvValPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="@string/alc_profile_phone_value"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelPhone"
-        app:layout_constraintStart_toEndOf="@+id/tvLabelPhone" />
+                    <TextView
+                        android:id="@+id/tvLabelCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_country"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLabelTrack" />
 
-    <TextView
-        android:id="@+id/tvLabelSlack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/alc_profile_slack_username"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvValPhone" />
+                    <TextView
+                        android:id="@+id/tvValCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_country_value"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelCountry"
+                        app:layout_constraintStart_toEndOf="@+id/tvLabelCountry" />
+                </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvValSlack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:text="@string/alc_profile_slack_username_value"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelSlack"
-        app:layout_constraintStart_toEndOf="@id/tvLabelSlack" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/profile_list_padding"
+                    android:paddingBottom="@dimen/profile_list_padding">
+
+                    <TextView
+                        android:id="@+id/tvLabelEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_email"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLabelCountry" />
+
+                    <TextView
+                        android:id="@+id/tvValEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_email_value"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelEmail"
+                        app:layout_constraintStart_toEndOf="@+id/tvLabelEmail" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/profile_list_padding"
+                    android:paddingBottom="@dimen/profile_list_padding">
+
+                    <TextView
+                        android:id="@+id/tvLabelPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_phone"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLabelEmail" />
+
+                    <TextView
+                        android:id="@+id/tvValPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_phone_value"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelPhone"
+                        app:layout_constraintStart_toEndOf="@+id/tvLabelPhone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/profile_list_padding"
+                    android:paddingBottom="@dimen/profile_list_padding">
+
+                    <TextView
+                        android:id="@+id/tvLabelSlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_slack_username"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvValPhone" />
+
+                    <TextView
+                        android:id="@+id/tvValSlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/profile_list_margin"
+                        android:layout_marginLeft="@dimen/profile_list_margin"
+                        android:text="@string/alc_profile_slack_username_value"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tvLabelSlack"
+                        app:layout_constraintStart_toEndOf="@id/tvLabelSlack" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
