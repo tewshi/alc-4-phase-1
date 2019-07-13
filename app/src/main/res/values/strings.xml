@@ -5,4 +5,16 @@
     <string name="about_alc">About ALC</string>
     <string name="my_profile">My Profile</string>
     <string name="notification_error_ssl_cert_invalid">Invalid SSL certificate</string>
+    <string name="todo">TODO</string>
+    <string name="my_name">Ojoko Joseph Michael</string>
+    <string name="alc_profile_track">Track:</string>
+    <string name="alc_profile_track_value">Android</string>
+    <string name="alc_profile_country">Country:</string>
+    <string name="alc_profile_country_value">Nigeria</string>
+    <string name="alc_profile_email">Email:</string>
+    <string name="alc_profile_email_value">tjoe4u@gmail.com</string>
+    <string name="alc_profile_phone">Phone Number:</string>
+    <string name="alc_profile_phone_value">08064580107</string>
+    <string name="alc_profile_slack_username">Slack Username:</string>
+    <string name="alc_profile_slack_username_value">\@tewshi</string>
 </resources>
