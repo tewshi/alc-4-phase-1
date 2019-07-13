@@ -8,19 +8,16 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button about;
-    Button profile;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        about = findViewById(R.id.btAbout);
+        Button about = findViewById(R.id.btAbout);
         about.setOnClickListener(this);
 
-        profile = findViewById(R.id.btProfile);
+        Button profile = findViewById(R.id.btProfile);
         profile.setOnClickListener(this);
     }
 
