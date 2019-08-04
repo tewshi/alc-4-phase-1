@@ -1,6 +1,6 @@
 ## alc-4-phase-1
 
-ALC 4.0: Phase 1 Challenge- Android
+ALC 4.0: Phase 1 Challenge 1 - Android
 
 Description:
 * This challenge is a simple Android Application with three Activities, the first Activity is the main Activity with two Buttons.
